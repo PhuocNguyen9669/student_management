@@ -33,6 +33,7 @@ $(document).ready(function() {
             },
         messages: {
             fullname: {
+                required: "Please enter your full name",
                 minlength: "Full name should be at least 3 characters"
             },
             age: {
