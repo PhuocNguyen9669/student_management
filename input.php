@@ -87,14 +87,29 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</head>
+
+    <script src="form-validation.js"></script>
+    <style>
+        input.error {
+            font-weight: 300;
+            color: red;
+        }
+        label.error {
+            font-weight: 300;
+            color: red;
+        }
+    </style>
+</head> 
 <body>
     <div class="container">
         <div class="panel panel-primary">
@@ -102,7 +117,7 @@ if (isset($_GET['id'])) {
                 <h2 class="text-center" id="students">Add Student</h2>
             </div>
             <div class="panel-body">
-                <form method="post">
+                <form method="post" id="form-validate">
                     <div class="form-group">
                         <label for="usr">Name:</label>
                         <input type="number" name="id" value="<?= $id ?>" style="display: none;">
